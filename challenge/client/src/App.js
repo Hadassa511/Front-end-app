@@ -1,0 +1,21 @@
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import Home from './Home';
+
+import Viewers from './Viewers';
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Route exact path="/viewer" component={Viewers} />
+        <Route exact path="/" component={Home} />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
