@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -10,10 +10,10 @@ import Viewers from './Viewers';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Switch>
         <Route exact path="/viewer" component={Viewers} />
         <Route exact path="/" component={Home} />
-      </Router>
+      </Switch>
     </div>
   );
 }

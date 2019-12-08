@@ -59,14 +59,14 @@ class Home extends Component {
                 <Card name="Total Micrographs" value={count} />
               </div>
               {Object.keys(data).map(key => {
-                console.log(
-                  'data',
-                  data,
-                  data[key],
-                  key,
-                  data[key].name,
-                  data[key].key
-                );
+                // console.log(
+                //   'data',
+                //   data,
+                //   data[key],
+                //   key,
+                //   data[key].name,
+                //   data[key].key
+                // );
                 return (
                   <div className="col-md-4">
                     <Card

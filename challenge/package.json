@@ -4,12 +4,16 @@
   "version": "0.0.1",
   "license": "NOLICENSE",
   "scripts": {
-    "dev": "sapper dev -p 5000"
+    "client-install": "npm install --prefix client",
+    "server": "sapper dev -p 5000",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "@polka/send-type": "^0.5.2",
     "body-parser": "^1.19.0",
     "compression": "^1.7.1",
+    "concurrently": "^5.0.0",
     "nedb-promise": "^2.0.1",
     "polka": "next",
     "sirv": "^0.4.0",
